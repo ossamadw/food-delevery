@@ -7,6 +7,9 @@ export const foodItems = [
     currentPrice: "12.99",
     oldPrice: "9.99",
     quantity: 1,
+    category: "Salads",
+    description:
+      "A refreshing mix of greens topped with juicy grilled chicken. \nFeta cheese, cucumbers, and tomatoes add a Mediterranean touch. \nLight, healthy, and packed with protein.",
   },
   {
     id: 2,
@@ -16,6 +19,9 @@ export const foodItems = [
     currentPrice: "18.99",
     oldPrice: "14.49",
     quantity: 1,
+    category: "Grill",
+    description:
+      "Slow-cooked ribs glazed in smoky BBQ sauce. \nServed with crispy fries and creamy coleslaw. \nA must-try for meat lovers.",
   },
   {
     id: 3,
@@ -25,6 +31,9 @@ export const foodItems = [
     currentPrice: "9.50",
     oldPrice: "6.99",
     quantity: 1,
+    category: "Snacks",
+    description:
+      "Golden tortilla chips smothered in melted cheese. \nTopped with jalapeños, olives, and fresh salsa. \nPerfect for sharing or snacking solo.",
   },
   {
     id: 4,
@@ -34,6 +43,9 @@ export const foodItems = [
     currentPrice: "11.00",
     oldPrice: "8.50",
     quantity: 1,
+    category: "Vegan",
+    description:
+      "A vibrant bowl filled with roasted veggies and quinoa. \nChickpeas, avocado, and greens add richness and texture. \nFinished with a creamy tahini drizzle.",
   },
   {
     id: 5,
@@ -43,6 +55,9 @@ export const foodItems = [
     currentPrice: "8.99",
     oldPrice: "6.50",
     quantity: 1,
+    category: "Breakfast",
+    description:
+      "Crispy toast layered with creamy mashed avocado. \nGarnished with radish slices, chili flakes, and olive oil. \nA trendy and nutritious breakfast choice.",
   },
   {
     id: 6,
@@ -52,5 +67,104 @@ export const foodItems = [
     currentPrice: "10.00",
     oldPrice: "7.00",
     quantity: 1,
+    category: "Desserts",
+    description:
+      "Fluffy waffles infused with rich chocolate flavor. \nTopped with whipped cream and a chocolate drizzle. \nA heavenly treat for dessert lovers.",
+  },
+  {
+    id: 7,
+    image:
+      "https://littlesunnykitchen.com/wp-content/uploads/2022/03/Pepperoni-Pizza-1-500x500.jpg",
+    name: "Pepperoni Pizza",
+    currentPrice: "15.99",
+    oldPrice: "12.49",
+    quantity: 1,
+    category: "Pizza",
+    description:
+      "Classic pizza with a crispy golden crust. \nLoaded with spicy pepperoni and gooey mozzarella. \nAn all-time favorite for every pizza fan.",
+  },
+  {
+    id: 8,
+    image:
+      "https://umamiology.com/wp-content/uploads/2024/04/Umamiology-Spaghetti-Bolognese-RecipeCard16.jpg",
+    name: "Spaghetti Bolognese",
+    currentPrice: "13.50",
+    oldPrice: "10.00",
+    quantity: 1,
+    category: "Pasta",
+    description:
+      "Al dente spaghetti topped with rich meat sauce. \nSimmered with herbs, garlic, and ripe tomatoes. \nA comforting Italian classic.",
+  },
+  {
+    id: 9,
+    image:
+      "https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw92573286/images/recipe-Images/classic-caesar-salad-recipe.jpg?sw=1200&sh=1200&sm=fit",
+    name: "Caesar Salad",
+    currentPrice: "10.99",
+    oldPrice: "8.99",
+    quantity: 1,
+    category: "Salads",
+    description:
+      "Crunchy romaine lettuce tossed in creamy Caesar dressing. \nTopped with parmesan shavings and golden croutons. \nSimple, classic, and always satisfying.",
+  },
+  {
+    id: 10,
+    image:
+      "https://www.allrecipes.com/thmb/ecb0XKvcrE7OyxBLX3OVEd30TbE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/686460-todds-famous-blueberry-pancakes-Dianne-1x1-1-9bd040b975634bce884847ce2090de16.jpg",
+    name: "Blueberry Pancakes",
+    currentPrice: "9.49",
+    oldPrice: "6.99",
+    quantity: 1,
+    category: "Breakfast",
+    description:
+      "Stacked fluffy pancakes filled with juicy blueberries. \nServed warm with butter and maple syrup. \nA sweet way to start your morning.",
+  },
+  {
+    id: 11,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg",
+    name: "Margherita Pizza",
+    currentPrice: "13.99",
+    oldPrice: "10.99",
+    quantity: 1,
+    category: "Pizza",
+    description:
+      "A timeless favorite topped with fresh mozzarella. \nBasil leaves and rich tomato sauce bring vibrant flavor. \nLight, simple, and perfectly satisfying.",
+  },
+  {
+    id: 12,
+    image:
+      "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg",
+    name: "Four Cheese Pizza",
+    currentPrice: "16.50",
+    oldPrice: "13.00",
+    quantity: 1,
+    category: "Pizza",
+    description:
+      "A cheesy masterpiece with mozzarella, cheddar, gorgonzola, and parmesan. \nCreamy and rich with a golden, crispy crust. \nA dream come true for cheese lovers.",
+  },
+  {
+    id: 13,
+    image:
+      "https://recipefund.com/wp-content/uploads/jet-form-builder/f133c249d4a29961d2fd87ee9713e9c1/2023/08/Vegie-Deight-Pizza.png",
+    name: "Veggie Delight Pizza",
+    currentPrice: "14.75",
+    oldPrice: "11.99",
+    quantity: 1,
+    category: "Pizza",
+    description:
+      "Loaded with bell peppers, mushrooms, olives, and onions. \nA fresh, colorful, and crunchy vegetarian feast. \nPerfectly balanced and full of flavor.",
+  },
+  {
+    id: 14,
+    image:
+      "https://www.thespruceeats.com/thmb/xuxwh4RIGcZMgaJE8u3SueM0SoA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/aqIMG_4568fhor-0b89dc5c8c494ee9828ed29805791c5a.jpg",
+    name: "Meat Lovers Pizza",
+    currentPrice: "17.99",
+    oldPrice: "14.50",
+    quantity: 1,
+    category: "Pizza",
+    description:
+      "A hearty mix of pepperoni, sausage, bacon, and ham. \nSavory and satisfying with every bite. \nFor serious meat enthusiasts only.",
   },
 ];
