@@ -1,7 +1,7 @@
 
-const QuantityOrder = ({ value = 1,  increaseQuantity, decreaseQuantity }) => {
+const QuantityOrder = ({ value = 1,  increaseQuantity, decreaseQuantity , className }) => {
   return (
-    <div className="p-1.5 ring-2 ring-primaryColor rounded-full flex justify-between items-center max-w-[900px] mx-auto">
+    <div className={`p-1.5 ring-2 ring-primaryColor rounded-full flex justify-between items-center max-w-[900px] mx-auto ${className}`}>
       <button
         aria-label="Decrease quantity"
         className="rounded-full hover:bg-slate-100 py-1 px-3"

@@ -1,23 +1,17 @@
+import { NavLink } from "react-router-dom";
 import AddToCartBtn from "./AddToCartBtn";
+import FoodImage from "./FoodImage";
 
-const FoodCard = ({image , name , currentPrice , oldPrice , addItemToCart }) => {
+const FoodCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart }) => {
   return (
     <article className="space-y-2 cursor-pointer">
-      <div className="overflow-hidden rounded-2xl bg-gray-50">
-        <div className="flex items-center h-[200px] overflow-hidden">
-          <img
-            src={image}
-            alt={name }
-            className="hover:scale-105 transition-all"
-            loading="lazy"
-          />
-        </div>
-      </div>
 
+      <FoodImage src={image} alt={name} id={id} className="h-[200px]" />
+      
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
           <h2 className="mt-2 text-lg font-semibold text-gray-800">
-            {name }
+            <NavLink to={`/product/${id}`} >{name}</NavLink>
           </h2>
           
           <div className="flex gap-2 items-center">
