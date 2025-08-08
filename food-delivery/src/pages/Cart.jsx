@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartSummary from "../components/CartSummary";
-import { removeFromCart , decreaseQuantity , increaseQuantity } from "../features/cart/cartSlice";
+import { removeFromCart , decreaseQuantity , increaseQuantity, selectCartItems } from "../features/cart/cartSlice";
 import QuantityOrder from "../components/QuantityOrder";
+import FoodImage from "../components/FoodImage";
 
 const Cart = () => {
-  const items = useSelector((state) => state.cart.cart);
+  const items = useSelector(selectCartItems);
   const dispatch = useDispatch();
 
   const removeItem = (item) => {
@@ -47,19 +48,12 @@ const Cart = () => {
                   key={item.id}
                   className="bg-white md:text-lg border-b text-center"
                 >
-                  <td>
-                    <figure className="h-fit p-2 w-full flex justify-center">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="h-20 object-cover rounded  w-20"
-                        loading="lazy"
-                      />
-                    </figure>
+                  <td className="p-1">
+                    <FoodImage src={item.image}  alt={item.name} id={item.id} className="h-20 rounded-lg w-20 m-auto "  />
                   </td>
                   <td className="text-sm">{item.name}</td>
                   <td className="px-6 py-4">
-                    <QuantityOrder
+                    <QuantityOrder 
                       increaseQuantity={() => increase(item)}
                       decreaseQuantity={() => decrease(item)}
                       value={item.quantity}
