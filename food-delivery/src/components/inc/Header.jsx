@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { selectCartItems } from "../../features/cart/cartSlice";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const items = useSelector(selectCartItems);
+
 
   const navLinks = [
     { name: "Home", to: "/" },
@@ -24,7 +28,7 @@ const Header = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
-        <ul className="flex flex-col md:flex-row gap-8 py-10 md:py-0 text-center">
+        <ul className="flex flex-col md:flex-row gap-8 py-10 md:py-0 items-center">
           {navLinks.map((nv, i) => (
             <li key={i}>
               <NavLink
@@ -36,7 +40,11 @@ const Header = () => {
                 }
                 onClick={() => setIsOpen(false)}
               >
-                {nv.name}
+                {nv.name === 'Cart' ? (
+                  <>
+                    Cart <sup className="font-semibold text-red-500 text-lg">{items.length > 0 ? items.length : 0}</sup>
+                  </>
+                ) : nv.name}
               </NavLink>
             </li>
           ))}
