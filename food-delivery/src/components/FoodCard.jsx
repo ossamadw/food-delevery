@@ -6,11 +6,11 @@ const FoodCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart 
   return (
     <article className="space-y-2 cursor-pointer">
 
-      <FoodImage src={image} alt={name} id={id} className="h-[200px]" />
+      <FoodImage src={image} alt={name} id={id} className="h-[200px] w-full" />
       
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-          <h2 className="mt-2 text-lg font-semibold text-gray-800">
+          <h2 className="mt-2 text-sm font-semibold text-gray-800">
             <NavLink to={`/product/${id}`} >{name}</NavLink>
           </h2>
           

@@ -1,18 +1,16 @@
 import { NavLink } from "react-router-dom";
 
-const FoodImage = ({id , src , alt , className}) => {
+const FoodImage = ({ id, src, alt, className }) => {
   return (
-    <div className="overflow-hidden rounded-2xl bg-slate-50">
-      <div className={` flex items-center overflow-hidden ${className}`}>
-        <NavLink to={`/product/${id}`}>
-          <img
-            src={src}
-            alt={alt}
-            className="w-full h-full hover:scale-105 transition-all"
-            loading="lazy"
-          />
-        </NavLink>
-      </div>
+    <div className={`overflow-hidden rounded-2xl bg-slate-50 ${className}`}>
+      <NavLink to={`/product/${id}`}>
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className="w-full h-48 sm:h-56 md:h-64 lg:h-96 object-cover hover:scale-105 transition-transform duration-300"
+        />
+      </NavLink>
     </div>
   );
 };
