@@ -1,19 +1,21 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Menu from "../pages/Menu";
-import Cart from "../pages/Cart";
-import ProductDetails from "../pages/productDetails";
+import MenuPage from "../features/menu/pages/MenuPage";
 import CheckOut from "../pages/CheckOut";
+import NotFound from "../pages/notFound";
+import CartPage from "../features/cart/pages/CartPage";
+import MenuItemDetail from "../features/menu/pages/MenuItemDetails";
 
 const AppRoutes = () => {
     return (
 
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/product/:id" element={<MenuItemDetail />} />
+            <Route path="/checkout" element={<CheckOut/>} />
+            <Route path="*" element={<NotFound />} />
 
         </Routes>
 

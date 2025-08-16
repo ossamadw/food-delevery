@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+
+  
   return (
     <section className="p-2 md:p-10 bg-backgroundColor">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 ">

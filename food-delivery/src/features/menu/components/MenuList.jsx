@@ -1,10 +1,10 @@
-import FoodCard from "./FoodCard";
+import MenuCard from "./MenuCard";
 
-const FoodList = ({ foodItems, addItemToCart }) => {
+const MenuList = ({ foodItems, addItemToCart }) => {
   return (
     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
       {foodItems.map((food) => (
-        <FoodCard
+        <MenuCard
           key={food.id}
           id={food.id}
           image={food.image}
@@ -18,4 +18,4 @@ const FoodList = ({ foodItems, addItemToCart }) => {
   );
 };
 
-export default FoodList;
+export default MenuList;

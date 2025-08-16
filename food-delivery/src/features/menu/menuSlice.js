@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { foodItems } from "../../data/productData";
 
 const initialState = {
-  products: foodItems,
+  menu: foodItems,
 };
 
-const productSlice = createSlice({
-    name : "product",
+const menuSlice = createSlice({
+    name : "menu",
     initialState,
 
     reducers : {
@@ -15,5 +15,5 @@ const productSlice = createSlice({
 
 })
 
-export const selectAllProducts = (state) => state.products.products;
-export default productSlice.reducer
+export const selectAllItmes = (state) => state.menu.menu;
+export default menuSlice.reducer

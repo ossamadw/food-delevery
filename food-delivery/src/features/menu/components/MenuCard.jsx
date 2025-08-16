@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import AddToCartBtn from "./AddToCartBtn";
-import FoodImage from "./FoodImage";
+import AddToCartBtn from "../../../components/AddToCartBtn";
+import FoodImage from "../../../components/FoodImage";
 
-const FoodCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart }) => {
+const MenuCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart }) => {
   return (
     <article className="space-y-2 cursor-pointer">
 
@@ -13,7 +13,6 @@ const FoodCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart 
           <h2 className="mt-2 text-sm font-semibold text-gray-800">
             <NavLink to={`/product/${id}`} >{name}</NavLink>
           </h2>
-          
           <div className="flex gap-2 items-center">
             <del className="text-gray-500 text-sm">{oldPrice}</del>
             <h3 className="text-green-600 font-semibold text-lg">{currentPrice}</h3>
@@ -27,4 +26,4 @@ const FoodCard = ({ id , image , name , currentPrice , oldPrice , addItemToCart 
   );
 };
 
-export default FoodCard;
+export default MenuCard;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CheckOutForm from "../components/CheckOutForm";
-import CartSummary from "../components/CartSummary";
+import CartSummary from "../features/cart/components/CartSummary";
 import Button from "../components/button";
 import OrderSummary from "../components/OrderSummary";
 

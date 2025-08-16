@@ -17,10 +17,10 @@ const cartSlice = createSlice({
       );
       if (existingItem) {
         existingItem.quantity += 1;
-        toast.info(action.payload.name + '  quantity has been increased', { autoClose: 1000, className: '  w-2/3 md:w-full m-1' });
+        toast.info(action.payload.name + '  quantity has been increased', { autoClose: 1000, className: '  w-1/2 md:w-full m-1' });
       } else {
         state.cartItems.push({ ...action.payload, quantity: 1 });
-        toast.success(action.payload.name + ' added to cart', { autoClose: 1000, className: 'text-sm   w-2/3 md:w-full m-1' });
+        toast.success(action.payload.name + ' added to cart', { autoClose: 1000, className: 'text-sm   w-1/2 md:w-full m-1' });
       }
     },
     increaseQuantity(state, action) {

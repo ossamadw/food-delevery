@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartSummary from "../components/CartSummary";
-import { removeFromCart , decreaseQuantity , increaseQuantity, selectCartItems } from "../features/cart/cartSlice";
-import QuantityOrder from "../components/QuantityOrder";
-import FoodImage from "../components/FoodImage";
+import { removeFromCart , decreaseQuantity , increaseQuantity, selectCartItems } from "../cartSlice";
+import QuantityOrder from "../../../components/QuantityOrder";
+import FoodImage from "../../../components/FoodImage";
 
-const Cart = () => {
+const CartPage = () => {
   const items = useSelector(selectCartItems);
   const dispatch = useDispatch();
 
@@ -99,4 +99,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartPage;
