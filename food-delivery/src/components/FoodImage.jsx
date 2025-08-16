@@ -8,7 +8,7 @@ const FoodImage = ({ id, src, alt, className }) => {
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-48 sm:h-56 md:h-64 lg:h-96 object-cover hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 sm:h-56 md:h-full lg:h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </NavLink>
     </div>
