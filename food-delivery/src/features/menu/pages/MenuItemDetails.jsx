@@ -16,7 +16,7 @@ const MenuItemDetail = () => {
   const dispatch = useDispatch();
   const allItems = useSelector(selectAllItems);
   const currentItem = allItems.find((it) => it.id === parseInt(id));
-  
+
   const relatedProducts = allItems.filter(
     (product) =>
       product.category === currentItem?.category &&
