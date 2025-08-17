@@ -1,12 +1,12 @@
 const CategoryFilter = ({categories , selectedCategory  , handleCategories , resetFilter}) => {
 
   return (
-    <div className="w-full flex justify-center items-center gap-4 text-lg overflow-x-auto p-2">
+    <div className="w-full flex justify-center text-sm items-center gap-4  overflow-x-auto p-2">
       {categories.map((item, i) => (
         <button
           onClick={() => handleCategories(item)}
           key={i}
-          className="cursor-pointer px-4 py-2 rounded text-white font-semibold bg-accentColor"
+          className="cursor-pointer px-4 py-2  rounded text-white font-semibold bg-accentColor"
         >
           {item}
         </button>

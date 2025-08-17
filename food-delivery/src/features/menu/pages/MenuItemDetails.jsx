@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { selectAllItmes } from "../menuSlice";
+import { selectAllItems } from "../menuSlice";
 import { useDispatch, useSelector } from "react-redux";
 import MenuList from "../components/MenuList";
 import {
@@ -14,7 +14,7 @@ import MenuItemInfo from "../components/MenuItemInfo";
 const MenuItemDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const allItems = useSelector(selectAllItmes);
+  const allItems = useSelector(selectAllItems);
   const currentItem = allItems.find((it) => it.id === parseInt(id));
   
   const relatedProducts = allItems.filter(

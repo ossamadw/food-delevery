@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Home", to: "/" },
     { name: "View Menu", to: "/menu" },
     { name: "Cart", to: "/cart" },
+    
   ];
 
   return (

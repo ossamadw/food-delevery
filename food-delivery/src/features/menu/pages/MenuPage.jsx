@@ -1,18 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useMemo, useState } from "react";
 import { addToCart } from "../../cart/cartSlice";
-import { useState, useMemo } from "react";
+import CategoryFilter from "../components/CategoryFilter";
 import SearchForm from "../../../components/SearchForm";
 import MenuList from "../components/MenuList";
-import { selectAllItmes } from "../menuSlice";
-import CategoryFilter from "../components/CategoryFilter";
+import { fetchItems, getItemsError, getItemsStatus, selectAllItems } from "../menuSlice";
 
 const MenuPage = () => {
-  const foodItems = useSelector(selectAllItmes);
+  const foodItems = useSelector(selectAllItems);
+  const menuStatus = useSelector(getItemsStatus);
+  const error = useSelector(getItemsError);
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
+
+  useEffect(() => {
+    dispatch(fetchItems());
+  }, [dispatch]);
 
   const addItemToCart = (item) => {
     dispatch(addToCart(item));
@@ -49,9 +55,14 @@ const MenuPage = () => {
     setSearchTerm("");
   };
 
+  //  Loading
+  if (menuStatus === true) return <p className="text-center">Loading menu...</p>;
+
+  //  Error
+  if (error) return <p className="text-red-500 text-center">Error: {error}</p>;
+
   return (
     <section className="space-y-10">
-
       <SearchForm
         onChange={(e) => setSearch(e.target.value)}
         value={search}
@@ -70,7 +81,7 @@ const MenuPage = () => {
           <MenuList
             foodItems={filteredByCategory}
             addItemToCart={addItemToCart}
-          /> 
+          />
         </>
       ) : (
         <p className="text-center text-red-500 font-semibold">

@@ -51,7 +51,7 @@ const CartPage = () => {
                   <td className="p-1">
                     <FoodImage src={item.image}  alt={item.name} id={item.id} className="h-20 rounded-lg w-20 m-auto "  />
                   </td>
-                  <td className="text-sm">{item.name}</td>
+                  <td className="text-sm font-semibold">{item.name.slice(0,5)}...</td>
                   <td className="px-6 py-4">
                     <QuantityOrder 
                       increaseQuantity={() => increase(item)}

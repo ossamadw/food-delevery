@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../../../components/button";
 const CartSummary = ({ total, items = 0 }) => {
   return (
-    <aside className="p-5 h-fit sticky top-5 bg-slate-50 text-lg font-semibold text-gray-600 rounded-lg">
+    <aside className="p-5 h-fit sticky top-5 bg-slate-50 text-sm md:text-lg font-semibold text-gray-600 rounded-lg">
       {items.length > 0 ? (
         <div>
           <h1 className="font-bold mb-2">Your Cart Summary</h1>
@@ -12,7 +12,7 @@ const CartSummary = ({ total, items = 0 }) => {
 
           <div className="mt-3">
             <Button type="button">
-              <NavLink to="/checkout">Proceed to Checkout</NavLink>
+              <NavLink to="/login">Proceed to Checkout</NavLink>
             </Button>
           </div>
         </div>

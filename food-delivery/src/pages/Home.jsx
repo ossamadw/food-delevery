@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+  useEffect(()=>{
+    fetch("/data/menu.json")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 
+  },[])
   
   return (
     <section className="p-2 md:p-10 bg-backgroundColor">
